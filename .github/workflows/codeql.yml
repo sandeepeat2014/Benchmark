@@ -68,7 +68,8 @@ jobs:
 
     - run: |
        echo "Run, Build Application using script"
-       cd ${{ github.workspace }}
+       cd ${{GITHUB_WORKSPACE}}
+       echo ${{GITHUB_WORKSPACE}}
        ls -lart ${{ github.workspace }}
 
     - name: Perform CodeQL Analysis
